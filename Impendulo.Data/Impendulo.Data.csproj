@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB508B3A-01F7-4B80-8CA3-C4C0151B63EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Impendulo.Data</RootNamespace>
+    <AssemblyName>Impendulo.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionalClasses\ObservableListSource.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Models\Activity.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Address.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApprenticeshipEnrollmentDocument.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApprienticeshipEnrollment.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Assessor.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContactDetail.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CostingModel.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Course.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CourseSchedule.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurricullumCourseCode.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Curriculum.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurriculumCourse.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurriculumCourseEnrollment.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurriculumCourseMinimumMaximum.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurriculumCourseModule.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurriculumCoursePredecessor.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurriculumEnquiry.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurriculumEquirySelectedCours.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurriculumPrequisiteCourse.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmailMessageRepository.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmailMessageRepositoryHistory.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmailSystemOutGoingMessage.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmailSystemOutGoingMessageAttachment.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Enquiry.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Enrollment.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EquiryHistory.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Facilitator.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FacilitatorAssociatedCourse.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FacilitatorQualification.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FacilitatorSetaAccreditation.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\File.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetCurriculumCourseInOrder_Result.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Individual.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Login.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupAddressType.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupContactType.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupCountry.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupDepartment.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupDisability.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupEmailMessageRepositoryHistoryTrancationType.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupEnquiryStatus.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupEnrollentDocumentType.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupEnrollmentProgressState.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupEnrollmentType.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupEquiryHistoryType.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupEthnicity.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupGender.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupMartialStatus.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupProcess.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupProcessStep.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupProvince.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupQualificationLevel.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupSectionalEnrollmentType.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupSeta.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupTitle.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LookupTypeOfRelation.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MCDEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MCDEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MCDEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MCDEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MCDEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MessageTemplate.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Module.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NextOfKin.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Qualification.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reports_StudentReports_Result.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Report_StudentInfo_Result.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Schedule.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SMTPSetting.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Student.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentAssociatedCompany.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentDisability.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SystemAdministrator.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Venue.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VenueAssociatedCurriculumCourse.cs">
+      <DependentUpon>MCDEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Models\MCDEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MCDEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\MCDEntities.edmx.diagram">
+      <DependentUpon>MCDEntities.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\MCDEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MCDEntities.edmx</DependentUpon>
+      <LastGenOutput>MCDEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\MCDEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MCDEntities.edmx</DependentUpon>
+      <LastGenOutput>MCDEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

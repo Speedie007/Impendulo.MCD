@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D23EB8C1-6D7C-4D0C-B20C-6B0060C4343B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Impendulo.StudentEngineeringCourseErollment.Devlopment</RootNamespace>
+    <AssemblyName>Impendulo.StudentEngineeringCourseErollment</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CurriculumEmrollmentForms\ApprenticeshipEnrollment\frmApprenticeshipEnrollmentFormV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurriculumEmrollmentForms\ApprenticeshipEnrollment\frmApprenticeshipEnrollmentFormV2.Designer.cs">
+      <DependentUpon>frmApprenticeshipEnrollmentFormV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrollmentCourseSelection\frmEnrollmentCourseSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrollmentCourseSelection\frmEnrollmentCourseSelection.Designer.cs">
+      <DependentUpon>frmEnrollmentCourseSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentCourseEnrollmentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentCourseEnrollmentV2.Designer.cs">
+      <DependentUpon>frmStudentCourseEnrollmentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateForEnrollmentSections\frmApprenticeshipEnrollmentSectionTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplateForEnrollmentSections\frmApprenticeshipEnrollmentSectionTemplate.Designer.cs">
+      <DependentUpon>frmApprenticeshipEnrollmentSectionTemplate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CurriculumEmrollmentForms\ApprenticeshipEnrollment\frmApprenticeshipEnrollmentFormV2.resx">
+      <DependentUpon>frmApprenticeshipEnrollmentFormV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrollmentCourseSelection\frmEnrollmentCourseSelection.resx">
+      <DependentUpon>frmEnrollmentCourseSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentCourseEnrollmentV2.resx">
+      <DependentUpon>frmStudentCourseEnrollmentV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TemplateForEnrollmentSections\frmApprenticeshipEnrollmentSectionTemplate.resx">
+      <DependentUpon>frmApprenticeshipEnrollmentSectionTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Curriculum.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CurriculumCourse.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Enrollment.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.File.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Student.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Impendulo.Common\Impendulo.Common.csproj">
+      <Project>{0f07fa77-11b2-41a8-8133-4fd607c1d43a}</Project>
+      <Name>Impendulo.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.Data\Impendulo.Data.csproj">
+      <Project>{db508b3a-01f7-4b80-8ca3-c4c0151b63ee}</Project>
+      <Name>Impendulo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.Scheduling\Impendulo.Scheduling.csproj">
+      <Project>{AF57CE99-04AC-487D-8254-A8015CD0C3BE}</Project>
+      <Name>Impendulo.Scheduling</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.StudentsAddNewStudent\Impendulo.Students.csproj">
+      <Project>{AA442BE6-7AB7-4222-9151-BA9966B04017}</Project>
+      <Name>Impendulo.Students</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AddNewEnrollments\" />
+    <Folder Include="CurriculumEmrollmentForms\AssesmentEnrollmenForms\" />
+    <Folder Include="CurriculumEmrollmentForms\LOPTEnrollmentForms\" />
+    <Folder Include="CurriculumEmrollmentForms\SoftSkillsEnrollmentForms\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{255D084D-FCC8-4557-847B-A4CF7E9E96CC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Impendulo.CoursesRedevelopment</RootNamespace>
+    <AssemblyName>Impendulo.CoursesRedevelopment</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddCurriculumCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddCurriculumCourse.Designer.cs">
+      <DependentUpon>frmAddCurriculumCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddModuleActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddModuleActivities.Designer.cs">
+      <DependentUpon>frmAddModuleActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddModules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddModules.Designer.cs">
+      <DependentUpon>frmAddModules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddTrainingDepartmentCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddTrainingDepartmentCourses.Designer.cs">
+      <DependentUpon>frmAddTrainingDepartmentCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddDepartment.Designer.cs">
+      <DependentUpon>frmAddDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddCurriculum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddCurriculum.Designer.cs">
+      <DependentUpon>frmAddCurriculum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddTrainingDepartmentCourseSeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course Components\frmAddTrainingDepartmentCourseSeta.Designer.cs">
+      <DependentUpon>frmAddTrainingDepartmentCourseSeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course PreRequiste Courses\frmAddPreRequisteCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\Add Course PreRequiste Courses\frmAddPreRequisteCourses.Designer.cs">
+      <DependentUpon>frmAddPreRequisteCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Configuration Form\Update Course Components\frmUpdateCurriculumCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\Update Course Components\frmUpdateCurriculumCourse.Designer.cs">
+      <DependentUpon>frmUpdateCurriculumCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Configuration Form\View Course Summary\frmCurriculumCourseSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Configuration Form\View Course Summary\frmCurriculumCourseSummary.Designer.cs">
+      <DependentUpon>frmCurriculumCourseSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course Main Form\frmCourseConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Course Main Form\frmCourseConfiguration.Designer.cs">
+      <DependentUpon>frmCourseConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Course Configuration Form\Add Course Components\frmAddCurriculumCourse.resx">
+      <DependentUpon>frmAddCurriculumCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Configuration Form\Add Course Components\frmAddModuleActivities.resx">
+      <DependentUpon>frmAddModuleActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Configuration Form\Add Course Components\frmAddModules.resx">
+      <DependentUpon>frmAddModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Configuration Form\Add Course Components\frmAddTrainingDepartmentCourses.resx">
+      <DependentUpon>frmAddTrainingDepartmentCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Configuration Form\Add Course Components\frmAddDepartment.resx">
+      <DependentUpon>frmAddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Configuration Form\Add Course Components\frmAddCurriculum.resx">
+      <DependentUpon>frmAddCurriculum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Configuration Form\Add Course Components\frmAddTrainingDepartmentCourseSeta.resx">
+      <DependentUpon>frmAddTrainingDepartmentCourseSeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Configuration Form\Add Course PreRequiste Courses\frmAddPreRequisteCourses.resx">
+      <DependentUpon>frmAddPreRequisteCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Configuration Form\Update Course Components\frmUpdateCurriculumCourse.resx">
+      <DependentUpon>frmUpdateCurriculumCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Configuration Form\View Course Summary\frmCurriculumCourseSummary.resx">
+      <DependentUpon>frmCurriculumCourseSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Course Main Form\frmCourseConfiguration.resx">
+      <DependentUpon>frmCourseConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Activity.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CostingModel.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Course.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CourseMetaData.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Curriculum.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CurriculumCourse.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CurriculumCourseModule.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CurriculumCoursePerquisiteCourse.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CurriculumPrequisiteCourse.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Department.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.LookupDepartment.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.LookupEnrollmentType.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Module.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Seta.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.TrainingDepartment.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.TrainingDepartmentCourse.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Impendulo.Data\Impendulo.Data.csproj">
+      <Project>{db508b3a-01f7-4b80-8ca3-c4c0151b63ee}</Project>
+      <Name>Impendulo.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

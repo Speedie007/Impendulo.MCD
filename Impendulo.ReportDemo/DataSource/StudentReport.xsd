@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StudentReport" targetNamespace="http://tempuri.org/StudentReport.xsd" xmlns:mstns="http://tempuri.org/StudentReport.xsd" xmlns="http://tempuri.org/StudentReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="MCDConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MCDConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Impendulo.ReportDemo.Properties.Settings.GlobalReference.Default.MCDConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Report_StudentReportTableAdapter" GeneratorDataComponentClassName="Report_StudentReportTableAdapter" Name="Report_StudentReport" UserDataComponentName="Report_StudentReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MCDConnectionString1 (Settings)" DbObjectName="MCD.dbo.Report_StudentReport" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IndividualID, IndividualFirstName, IndividualSecondName, IndividualLastname, Title, StudentCurrentPosition, StudentIDNumber, Disability, Ethnicity, MaritialStatus, QualificationLevel, Gender, AddressLineOne, AddressLineTwo, AddressTown, AddressSuburb, AddressAreaCode, AddressIsDefault, AddressModifiedDate, CountryName, Province, AddressType, ContactDetailValue, ContactType FROM dbo.Report_StudentReport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IndividualID" DataSetColumn="IndividualID" />
+              <Mapping SourceColumn="IndividualFirstName" DataSetColumn="IndividualFirstName" />
+              <Mapping SourceColumn="IndividualSecondName" DataSetColumn="IndividualSecondName" />
+              <Mapping SourceColumn="IndividualLastname" DataSetColumn="IndividualLastname" />
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
+              <Mapping SourceColumn="StudentCurrentPosition" DataSetColumn="StudentCurrentPosition" />
+              <Mapping SourceColumn="StudentIDNumber" DataSetColumn="StudentIDNumber" />
+              <Mapping SourceColumn="Disability" DataSetColumn="Disability" />
+              <Mapping SourceColumn="Ethnicity" DataSetColumn="Ethnicity" />
+              <Mapping SourceColumn="MaritialStatus" DataSetColumn="MaritialStatus" />
+              <Mapping SourceColumn="QualificationLevel" DataSetColumn="QualificationLevel" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="AddressLineOne" DataSetColumn="AddressLineOne" />
+              <Mapping SourceColumn="AddressLineTwo" DataSetColumn="AddressLineTwo" />
+              <Mapping SourceColumn="AddressTown" DataSetColumn="AddressTown" />
+              <Mapping SourceColumn="AddressSuburb" DataSetColumn="AddressSuburb" />
+              <Mapping SourceColumn="AddressAreaCode" DataSetColumn="AddressAreaCode" />
+              <Mapping SourceColumn="AddressIsDefault" DataSetColumn="AddressIsDefault" />
+              <Mapping SourceColumn="AddressModifiedDate" DataSetColumn="AddressModifiedDate" />
+              <Mapping SourceColumn="CountryName" DataSetColumn="CountryName" />
+              <Mapping SourceColumn="Province" DataSetColumn="Province" />
+              <Mapping SourceColumn="AddressType" DataSetColumn="AddressType" />
+              <Mapping SourceColumn="ContactDetailValue" DataSetColumn="ContactDetailValue" />
+              <Mapping SourceColumn="ContactType" DataSetColumn="ContactType" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StudentReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="StudentReport" msprop:Generator_UserDSName="StudentReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Report_StudentReport" msprop:Generator_TableClassName="Report_StudentReportDataTable" msprop:Generator_TableVarName="tableReport_StudentReport" msprop:Generator_TablePropName="Report_StudentReport" msprop:Generator_RowDeletingName="Report_StudentReportRowDeleting" msprop:Generator_RowChangingName="Report_StudentReportRowChanging" msprop:Generator_RowEvHandlerName="Report_StudentReportRowChangeEventHandler" msprop:Generator_RowDeletedName="Report_StudentReportRowDeleted" msprop:Generator_UserTableName="Report_StudentReport" msprop:Generator_RowChangedName="Report_StudentReportRowChanged" msprop:Generator_RowEvArgName="Report_StudentReportRowChangeEvent" msprop:Generator_RowClassName="Report_StudentReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IndividualID" msprop:Generator_ColumnVarNameInTable="columnIndividualID" msprop:Generator_ColumnPropNameInRow="IndividualID" msprop:Generator_ColumnPropNameInTable="IndividualIDColumn" msprop:Generator_UserColumnName="IndividualID" type="xs:int" />
+              <xs:element name="IndividualFirstName" msprop:Generator_ColumnVarNameInTable="columnIndividualFirstName" msprop:Generator_ColumnPropNameInRow="IndividualFirstName" msprop:Generator_ColumnPropNameInTable="IndividualFirstNameColumn" msprop:Generator_UserColumnName="IndividualFirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndividualSecondName" msprop:Generator_ColumnVarNameInTable="columnIndividualSecondName" msprop:Generator_ColumnPropNameInRow="IndividualSecondName" msprop:Generator_ColumnPropNameInTable="IndividualSecondNameColumn" msprop:Generator_UserColumnName="IndividualSecondName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndividualLastname" msprop:Generator_ColumnVarNameInTable="columnIndividualLastname" msprop:Generator_ColumnPropNameInRow="IndividualLastname" msprop:Generator_ColumnPropNameInTable="IndividualLastnameColumn" msprop:Generator_UserColumnName="IndividualLastname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentCurrentPosition" msprop:Generator_ColumnVarNameInTable="columnStudentCurrentPosition" msprop:Generator_ColumnPropNameInRow="StudentCurrentPosition" msprop:Generator_ColumnPropNameInTable="StudentCurrentPositionColumn" msprop:Generator_UserColumnName="StudentCurrentPosition">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentIDNumber" msprop:Generator_ColumnVarNameInTable="columnStudentIDNumber" msprop:Generator_ColumnPropNameInRow="StudentIDNumber" msprop:Generator_ColumnPropNameInTable="StudentIDNumberColumn" msprop:Generator_UserColumnName="StudentIDNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Disability" msprop:Generator_ColumnVarNameInTable="columnDisability" msprop:Generator_ColumnPropNameInRow="Disability" msprop:Generator_ColumnPropNameInTable="DisabilityColumn" msprop:Generator_UserColumnName="Disability" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ethnicity" msprop:Generator_ColumnVarNameInTable="columnEthnicity" msprop:Generator_ColumnPropNameInRow="Ethnicity" msprop:Generator_ColumnPropNameInTable="EthnicityColumn" msprop:Generator_UserColumnName="Ethnicity" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaritialStatus" msprop:Generator_ColumnVarNameInTable="columnMaritialStatus" msprop:Generator_ColumnPropNameInRow="MaritialStatus" msprop:Generator_ColumnPropNameInTable="MaritialStatusColumn" msprop:Generator_UserColumnName="MaritialStatus">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QualificationLevel" msprop:Generator_ColumnVarNameInTable="columnQualificationLevel" msprop:Generator_ColumnPropNameInRow="QualificationLevel" msprop:Generator_ColumnPropNameInTable="QualificationLevelColumn" msprop:Generator_UserColumnName="QualificationLevel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AddressLineOne" msprop:Generator_ColumnVarNameInTable="columnAddressLineOne" msprop:Generator_ColumnPropNameInRow="AddressLineOne" msprop:Generator_ColumnPropNameInTable="AddressLineOneColumn" msprop:Generator_UserColumnName="AddressLineOne" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AddressLineTwo" msprop:Generator_ColumnVarNameInTable="columnAddressLineTwo" msprop:Generator_ColumnPropNameInRow="AddressLineTwo" msprop:Generator_ColumnPropNameInTable="AddressLineTwoColumn" msprop:Generator_UserColumnName="AddressLineTwo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AddressTown" msprop:Generator_ColumnVarNameInTable="columnAddressTown" msprop:Generator_ColumnPropNameInRow="AddressTown" msprop:Generator_ColumnPropNameInTable="AddressTownColumn" msprop:Generator_UserColumnName="AddressTown" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AddressSuburb" msprop:Generator_ColumnVarNameInTable="columnAddressSuburb" msprop:Generator_ColumnPropNameInRow="AddressSuburb" msprop:Generator_ColumnPropNameInTable="AddressSuburbColumn" msprop:Generator_UserColumnName="AddressSuburb" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AddressAreaCode" msprop:Generator_ColumnVarNameInTable="columnAddressAreaCode" msprop:Generator_ColumnPropNameInRow="AddressAreaCode" msprop:Generator_ColumnPropNameInTable="AddressAreaCodeColumn" msprop:Generator_UserColumnName="AddressAreaCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AddressIsDefault" msprop:Generator_ColumnVarNameInTable="columnAddressIsDefault" msprop:Generator_ColumnPropNameInRow="AddressIsDefault" msprop:Generator_ColumnPropNameInTable="AddressIsDefaultColumn" msprop:Generator_UserColumnName="AddressIsDefault" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AddressModifiedDate" msprop:Generator_ColumnVarNameInTable="columnAddressModifiedDate" msprop:Generator_ColumnPropNameInRow="AddressModifiedDate" msprop:Generator_ColumnPropNameInTable="AddressModifiedDateColumn" msprop:Generator_UserColumnName="AddressModifiedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CountryName" msprop:Generator_ColumnVarNameInTable="columnCountryName" msprop:Generator_ColumnPropNameInRow="CountryName" msprop:Generator_ColumnPropNameInTable="CountryNameColumn" msprop:Generator_UserColumnName="CountryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Province" msprop:Generator_ColumnVarNameInTable="columnProvince" msprop:Generator_ColumnPropNameInRow="Province" msprop:Generator_ColumnPropNameInTable="ProvinceColumn" msprop:Generator_UserColumnName="Province" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AddressType" msprop:Generator_ColumnVarNameInTable="columnAddressType" msprop:Generator_ColumnPropNameInRow="AddressType" msprop:Generator_ColumnPropNameInTable="AddressTypeColumn" msprop:Generator_UserColumnName="AddressType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactDetailValue" msprop:Generator_ColumnVarNameInTable="columnContactDetailValue" msprop:Generator_ColumnPropNameInRow="ContactDetailValue" msprop:Generator_ColumnPropNameInTable="ContactDetailValueColumn" msprop:Generator_UserColumnName="ContactDetailValue" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ContactType" msprop:Generator_ColumnVarNameInTable="columnContactType" msprop:Generator_ColumnPropNameInRow="ContactType" msprop:Generator_ColumnPropNameInTable="ContactTypeColumn" msprop:Generator_UserColumnName="ContactType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Report_StudentReport" />
+      <xs:field xpath="mstns:IndividualID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

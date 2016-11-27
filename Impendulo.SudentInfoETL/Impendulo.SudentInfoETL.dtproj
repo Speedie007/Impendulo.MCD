@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2000/10/XMLSchema">
+  <DeploymentModel>Project</DeploymentModel>
+  <DeploymentModelSpecificContent>
+    <Manifest>
+      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+        <SSIS:Properties>
+          <SSIS:Property SSIS:Name="ID">{3f80c577-55ab-42a1-acce-bd3cd9572585}</SSIS:Property>
+          <SSIS:Property SSIS:Name="Name">Impendulo.SudentInfoETL</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionComments">
+          </SSIS:Property>
+          <SSIS:Property SSIS:Name="CreationDate">2017-02-23T14:59:12.8962544+02:00</SSIS:Property>
+          <SSIS:Property SSIS:Name="CreatorName">BRENDAN-LAPTOP\Brendan Wood</SSIS:Property>
+          <SSIS:Property SSIS:Name="CreatorComputerName">BRENDAN-LAPTOP</SSIS:Property>
+          <SSIS:Property SSIS:Name="Description">
+          </SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACaxziiqK7Uihh9H2yurCCAAAAAACAAAAAAAQZgAAAAEAACAAAADjHugaJC3Trgj3R/MxLEO/QmSuCYssdqjZm7xYlx0avwAAAAAOgAAAAAIAACAAAACS435Oq5K2eHbJ9/aEsBiktVEtRdPHt06dEyVDDqgHtpAAAADTM514cqh6S9kay9PHtVsNsQV89lwi+D3/VlqqHxT571MZV4oH4MgZiLGSWpc1Kkhp3UmPROjk5aSCSUj2AKYtNsroyvSNnad9Z6quM0knnRjYVzWxcwwRCKnLPOSfexrs8+KlUOcukl2Mk0S7WANQ6BvS7+BMMOdnMGJNP0eXXrs9APZGCarmFp8iKL5pnBBAAAAAE3EcqR9P66xrd0DBkGWkl3gugHkF6n4KRMSQBVcRQRAgIkuPtVkJuqS7UQrjfhumX+gB7FTTE35756c7Th/Eow==</SSIS:Property>
+          <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
+        </SSIS:Properties>
+        <SSIS:Packages />
+        <SSIS:ConnectionManagers />
+        <SSIS:DeploymentInfo>
+          <SSIS:ProjectConnectionParameters />
+          <SSIS:PackageInfo />
+        </SSIS:DeploymentInfo>
+      </SSIS:Project>
+    </Manifest>
+  </DeploymentModelSpecificContent>
+</Project>

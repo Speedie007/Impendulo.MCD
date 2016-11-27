@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Impendulo.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{8ac65858-344e-461e-9af6-20f34cf2d08b}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Impendulo.Database</RootNamespace>
+    <AssemblyName>Impendulo.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Prebuilding" />
+    <Folder Include="PostBuilding" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Students.sql" />
+    <Build Include="dbo\Tables\StudentDisabilities.sql" />
+    <Build Include="dbo\Tables\LookupTitles.sql" />
+    <Build Include="dbo\Tables\LookupQualificationLevels.sql" />
+    <Build Include="dbo\Tables\LookupProvinces.sql" />
+    <Build Include="dbo\Tables\LookupMartialStatuses.sql" />
+    <Build Include="dbo\Tables\LookupGenders.sql" />
+    <Build Include="dbo\Tables\LookupEthnicities.sql" />
+    <Build Include="dbo\Tables\LookupDisabilities.sql" />
+    <Build Include="dbo\Tables\LookupCountries.sql" />
+    <Build Include="dbo\Tables\LookupContactTypes.sql" />
+    <Build Include="dbo\Tables\LookupAddressTypes.sql" />
+    <Build Include="dbo\Tables\Addresses.sql" />
+    <Build Include="dbo\Tables\Employees.sql" />
+    <Build Include="dbo\Tables\Assessors.sql" />
+    <Build Include="dbo\Tables\Modules.sql" />
+    <Build Include="dbo\Tables\Venues.sql" />
+    <Build Include="dbo\Tables\NextOfKins.sql" />
+    <Build Include="dbo\Tables\CompanyAddresses.sql" />
+    <Build Include="dbo\Tables\Companies.sql" />
+    <Build Include="dbo\Tables\StudentAssociatedCompany.sql" />
+    <Build Include="dbo\Tables\LookupTypeOfRelations.sql" />
+    <Build Include="dbo\Tables\Individuals.sql" />
+    <Build Include="dbo\Tables\IndividualContactDetails.sql" />
+    <Build Include="dbo\Tables\IndividualAddresses.sql" />
+    <Build Include="dbo\Tables\ContactDetails.sql" />
+    <Build Include="dbo\Tables\StudentNextOfKins.sql" />
+    <Build Include="dbo\Tables\CourseSchedules.sql" />
+    <Build Include="dbo\Tables\CompanyContactDetails.sql" />
+    <Build Include="dbo\Tables\ComapnyContacts.sql" />
+    <Build Include="dbo\Tables\Schedules.sql" />
+    <Build Include="dbo\Tables\LookupEnrollmentTypes_1.sql" />
+    <Build Include="dbo\Tables\TrainingDepartmentCombinationCourses.sql" />
+    <Build Include="dbo\Tables\TrainingDepartmentCourseListings.sql" />
+    <Build Include="dbo\Tables\Activities.sql" />
+    <Build Include="dbo\Tables\Enrollments.sql" />
+    <Build Include="dbo\Tables\Courses.sql" />
+    <Build Include="dbo\Tables\Curriculums.sql" />
+    <Build Include="dbo\Tables\CurriculumCourses.sql" />
+    <Build Include="dbo\Tables\CurriculumCourseModules.sql" />
+    <Build Include="dbo\Tables\CurriculumCourseModuleActivities.sql" />
+    <Build Include="dbo\Tables\CurriculumCourseMinimumMaximums.sql" />
+    <Build Include="dbo\Tables\CurriculumCourseAssociatedSetas.sql" />
+    <Build Include="dbo\Tables\CurricullumCourseCodes.sql" />
+    <Build Include="dbo\Tables\CostingModels.sql" />
+    <Build Include="dbo\Tables\LookupSectionalEnrollmentTypes.sql" />
+    <Build Include="dbo\Tables\LookupEnrollmentProgressStates.sql" />
+    <Build Include="dbo\Tables\CurriculumCoursePredecessors.sql" />
+    <Build Include="dbo\Tables\CurriculumCourseEnrollments.sql" />
+    <Build Include="dbo\Tables\ApprienticeshipEnrollments.sql" />
+    <Build Include="dbo\Tables\ApprienticeshipEnrollmentPaymentConfirmations.sql" />
+    <Build Include="dbo\Tables\SMTPSettings.sql" />
+    <Build Include="dbo\Tables\Qualifications.sql" />
+    <Build Include="dbo\Tables\FacilitatorSetaAccreditations.sql" />
+    <Build Include="dbo\Tables\Facilitators.sql" />
+    <Build Include="dbo\Tables\FacilitatorQualifications.sql" />
+    <Build Include="dbo\Tables\LookupSetas.sql" />
+    <Build Include="dbo\Tables\LookupDepartments.sql" />
+    <Build Include="dbo\Views\Report_StudentReport.sql" />
+    <Build Include="dbo\Stored Procedures\GetCurriculumCourseInOrder.sql" />
+    <Build Include="dbo\Stored Procedures\GetLookupTablesForEnumAutoGenteration.sql" />
+    <Build Include="dbo\Stored Procedures\ProcExample.sql" />
+    <Build Include="dbo\Stored Procedures\Reports_StudentReports.sql" />
+    <Build Include="dbo\Stored Procedures\Reports_StudentReports1.sql" />
+    <Build Include="dbo\Tables\VenueAssociatedCurriculumCourses_1.sql" />
+    <Build Include="dbo\Tables\Files.sql" />
+    <Build Include="dbo\Tables\FacilitatorAssociatedCourses.sql" />
+    <Build Include="dbo\Tables\Enquiry.sql" />
+    <Build Include="dbo\Tables\CompanyEnquiry.sql" />
+    <Build Include="dbo\Stored Procedures\Report_StudentInfo.sql" />
+    <Build Include="dbo\Tables\Login.sql" />
+    <Build Include="dbo\Tables\EquiryHistory.sql" />
+    <Build Include="dbo\Tables\EquiryAssociatedContacts.sql" />
+    <Build Include="dbo\Tables\DepartmentResponsibleEmployees.sql" />
+    <Build Include="dbo\Tables\SystemAdministrator.sql" />
+    <Build Include="dbo\Tables\EmailMessageRepositoryAttachments.sql" />
+    <Build Include="dbo\Tables\EmailMessageRepository.sql" />
+    <Build Include="dbo\Tables\LookupEquiryHistoryTypes.sql" />
+    <Build Include="dbo\Tables\LookupEnquiryStatuses.sql" />
+    <Build Include="dbo\Tables\CurriculumEnquiries.sql" />
+    <Build Include="dbo\Tables\EmailSystemOutGoingMessages.sql" />
+    <Build Include="dbo\Tables\EmailSystemOutGoingMessageAttachments.sql" />
+    <Build Include="dbo\Tables\MessageTemplates.sql" />
+    <Build Include="dbo\Tables\MessageTemplateAttachments.sql" />
+    <Build Include="dbo\Tables\LookupProcessSteps.sql" />
+    <Build Include="dbo\Tables\LookupProcesses.sql" />
+    <Build Include="dbo\Tables\LookupEmailMessageRepositoryHistoryTrancationTypes.sql" />
+    <Build Include="dbo\Tables\EnquiryEmailCorrespondence.sql" />
+    <Build Include="dbo\Tables\EmailMessageRepositoryHistory.sql" />
+    <Build Include="dbo\Tables\CurriculumEquirySelectedCourses.sql" />
+    <Build Include="dbo\Stored Procedures\InsertMissingCourses.sql" />
+    <Build Include="dbo\Tables\CurriculumPrequisiteCourses.sql" />
+    <Build Include="dbo\Tables\LookupEnrollentDocumentTypes_1.sql" />
+    <Build Include="dbo\Tables\CurriculumEnquiryEnrollments_2.sql" />
+    <Build Include="dbo\Tables\ApprenticeshipEnrollmentDocuments_1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PostBuilding\PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Impendulo.Database.publish.xml" />
+    <None Include="MCDMain.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Impendulo.Database.refactorlog" />
+  </ItemGroup>
+</Project>

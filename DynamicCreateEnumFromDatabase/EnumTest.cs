@@ -1,0 +1,8 @@
+﻿
+
+namespace DynamicCreateEnumFromDatabase
+{
+    class EnumTest
+    {
+    }
+}

@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AF9D303-A5DA-49C1-9497-EB6033A31076}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Impendulo.MainApplication</RootNamespace>
+    <AssemblyName>Impendulo.MainApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\lib\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.Ribbon35">
+      <HintPath>..\..\lib\RibbonControl\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationForms\Addresses\frmAddUpdateAddresses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Addresses\frmAddUpdateAddresses.Designer.cs">
+      <DependentUpon>frmAddUpdateAddresses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Company\AddUpdateCompany\frmAddCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Company\AddUpdateCompany\frmAddCompany.Designer.cs">
+      <DependentUpon>frmAddCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Company\frmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Company\frmCompany.Designer.cs">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Company\SearchForCompany\frmCompanySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Company\SearchForCompany\frmCompanySearch.Designer.cs">
+      <DependentUpon>frmCompanySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\ContactDetails\frmContactDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\ContactDetails\frmContactDetails.Designer.cs">
+      <DependentUpon>frmContactDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Contacts\frmContacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Contacts\frmContacts.Designer.cs">
+      <DependentUpon>frmContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddCurriculum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddCurriculum.Designer.cs">
+      <DependentUpon>frmAddCurriculum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddCurriculumCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddCurriculumCourse.Designer.cs">
+      <DependentUpon>frmAddCurriculumCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddDepartment.Designer.cs">
+      <DependentUpon>frmAddDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddModuleActivities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddModuleActivities.Designer.cs">
+      <DependentUpon>frmAddModuleActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddModules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddModules.Designer.cs">
+      <DependentUpon>frmAddModules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddTrainingDepartmentCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddTrainingDepartmentCourses.Designer.cs">
+      <DependentUpon>frmAddTrainingDepartmentCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddTrainingDepartmentCourseSeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Add Course Components\frmAddTrainingDepartmentCourseSeta.Designer.cs">
+      <DependentUpon>frmAddTrainingDepartmentCourseSeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\AddRemoveCurriculumCoursePreRequisites\frmAddPreRequisteCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\AddRemoveCurriculumCoursePreRequisites\frmAddPreRequisteCourses.Designer.cs">
+      <DependentUpon>frmAddPreRequisteCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\frmCourseConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\frmCourseConfiguration.Designer.cs">
+      <DependentUpon>frmCourseConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Update Course Components\frmUpdateCurriculumCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\Update Course Components\frmUpdateCurriculumCourse.Designer.cs">
+      <DependentUpon>frmUpdateCurriculumCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\View Course Summary\frmCurriculumCourseSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Courses\View Course Summary\frmCurriculumCourseSummary.Designer.cs">
+      <DependentUpon>frmCurriculumCourseSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Email\frmEmailMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Email\frmEmailMessage.Designer.cs">
+      <DependentUpon>frmEmailMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Email\Select Contacts\frmSelectEmailContacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Email\Select Contacts\frmSelectEmailContacts.Designer.cs">
+      <DependentUpon>frmSelectEmailContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Employees\AddUpdateEmployee\frmAddUpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Employees\AddUpdateEmployee\frmAddUpdateEmployee.Designer.cs">
+      <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Employees\CreateUpdateEmployeePassword\frmEmployeeUserNamePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Employees\CreateUpdateEmployeePassword\frmEmployeeUserNamePassword.Designer.cs">
+      <DependentUpon>frmEmployeeUserNamePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Employees\frmEmployeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Employees\frmEmployeeDetails.Designer.cs">
+      <DependentUpon>frmEmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Employees\LinkEmployeeDepartment\frmEmployeeAssociatedDepartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Employees\LinkEmployeeDepartment\frmEmployeeAssociatedDepartments.Designer.cs">
+      <DependentUpon>frmEmployeeAssociatedDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\EnquiryProcessing\Aprenticeship\Step1-DocumentsToSend\frmEnquiryDocumentsToSend_Apprenticeship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\EnquiryProcessing\Aprenticeship\Step1-DocumentsToSend\frmEnquiryDocumentsToSend_Apprenticeship.Designer.cs">
+      <DependentUpon>frmEnquiryDocumentsToSend_Apprenticeship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\EnquiryProcessing\Aprenticeship\Step2 - DocumentationRecieved\frmDocumentationRecieved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\EnquiryProcessing\Aprenticeship\Step2 - DocumentationRecieved\frmDocumentationRecieved.Designer.cs">
+      <DependentUpon>frmDocumentationRecieved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\frmClientEnquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\frmClientEnquiry.Designer.cs">
+      <DependentUpon>frmClientEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\frmClientEnquiryV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\frmClientEnquiryV2.Designer.cs">
+      <DependentUpon>frmClientEnquiryV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\InitialConsultation\frmEnquiryInitialConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\InitialConsultation\frmEnquiryInitialConsultation.Designer.cs">
+      <DependentUpon>frmEnquiryInitialConsultation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\InitialDocumentation\frmInitailDocumentation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\InitialDocumentation\frmInitailDocumentation.Designer.cs">
+      <DependentUpon>frmInitailDocumentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\NewEnquiry\frmNewEnquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\NewEnquiry\frmNewEnquiry.Designer.cs">
+      <DependentUpon>frmNewEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\SelectContacts\frmSelectCompanyContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\SelectContacts\frmSelectCompanyContact.Designer.cs">
+      <DependentUpon>frmSelectCompanyContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\SelectContacts\frmSelectIndividualContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\SelectContacts\frmSelectIndividualContact.Designer.cs">
+      <DependentUpon>frmSelectIndividualContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\SelectCourseCurriculum\frmSelectCourseCurriculumForClientEnquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\SelectCourseCurriculum\frmSelectCourseCurriculumForClientEnquiry.Designer.cs">
+      <DependentUpon>frmSelectCourseCurriculumForClientEnquiry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\UpdateSelectedCurriculumEnrollQty\frmUpdateSelectedCurriculumEnrollQty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\UpdateSelectedCurriculumEnrollQty\frmUpdateSelectedCurriculumEnrollQty.Designer.cs">
+      <DependentUpon>frmUpdateSelectedCurriculumEnrollQty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\ViewHistory\frmEnquiryViewHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enquiry\ViewHistory\frmEnquiryViewHistory.Designer.cs">
+      <DependentUpon>frmEnquiryViewHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enrollments\AddNewEnrollments\frmEnrollmentSelectCourseCurriculum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enrollments\AddNewEnrollments\frmEnrollmentSelectCourseCurriculum.Designer.cs">
+      <DependentUpon>frmEnrollmentSelectCourseCurriculum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enrollments\CurriculumEmrollmentForms\ApprenticeshipEnrollment\frmApprenticeshipEnrollmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enrollments\CurriculumEmrollmentForms\ApprenticeshipEnrollment\frmApprenticeshipEnrollmentForm.Designer.cs">
+      <DependentUpon>frmApprenticeshipEnrollmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Enrollments\frmStudentCourseEnrollmentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Enrollments\frmStudentCourseEnrollmentV2.Designer.cs">
+      <DependentUpon>frmStudentCourseEnrollmentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Facilitators\AddUpdateFacilitator\frmAddUpdateFacilitactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Facilitators\AddUpdateFacilitator\frmAddUpdateFacilitactor.Designer.cs">
+      <DependentUpon>frmAddUpdateFacilitactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Facilitators\FacilitatorCourses\frmFacilitatorAssociatedCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Facilitators\FacilitatorCourses\frmFacilitatorAssociatedCourses.Designer.cs">
+      <DependentUpon>frmFacilitatorAssociatedCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Facilitators\frmFacilitatorsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Facilitators\frmFacilitatorsDetails.Designer.cs">
+      <DependentUpon>frmFacilitatorsDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Facilitators\SearchForFacilitator\frmStudentSearchForStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Facilitators\SearchForFacilitator\frmStudentSearchForStudent.Designer.cs">
+      <DependentUpon>frmStudentSearchForStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Login\frmSystemLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Login\frmSystemLogin.Designer.cs">
+      <DependentUpon>frmSystemLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\MessageTemplates\AddMessageTemplates\frmAddMessageTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\MessageTemplates\AddMessageTemplates\frmAddMessageTemplate.Designer.cs">
+      <DependentUpon>frmAddMessageTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\MessageTemplates\frmMessageTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\MessageTemplates\frmMessageTemplates.Designer.cs">
+      <DependentUpon>frmMessageTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Scheduling\ApprenticeshipSechduling\frmScheduleApprenticeship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Scheduling\ApprenticeshipSechduling\frmScheduleApprenticeship.Designer.cs">
+      <DependentUpon>frmScheduleApprenticeship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Students\frmStudentAddNewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Students\frmStudentAddNewStudent.Designer.cs">
+      <DependentUpon>frmStudentAddNewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\Students\StudentSearch\frmStudentSearchForStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\Students\StudentSearch\frmStudentSearchForStudent.Designer.cs">
+      <DependentUpon>frmStudentSearchForStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\System\DatabaseSettings\frmDynamicallySetConnectionString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\System\DatabaseSettings\frmDynamicallySetConnectionString.Designer.cs">
+      <DependentUpon>frmDynamicallySetConnectionString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationForms\System\EmailSettings\frmEmailConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationForms\System\EmailSettings\frmEmailConfiguration.Designer.cs">
+      <DependentUpon>frmEmailConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCDMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MCDMainForm.Designer.cs">
+      <DependentUpon>MCDMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ApplicationForms\Addresses\frmAddUpdateAddresses.resx">
+      <DependentUpon>frmAddUpdateAddresses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Company\AddUpdateCompany\frmAddCompany.resx">
+      <DependentUpon>frmAddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Company\frmCompany.resx">
+      <DependentUpon>frmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Company\SearchForCompany\frmCompanySearch.resx">
+      <DependentUpon>frmCompanySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\ContactDetails\frmContactDetails.resx">
+      <DependentUpon>frmContactDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Contacts\frmContacts.resx">
+      <DependentUpon>frmContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\Add Course Components\frmAddCurriculum.resx">
+      <DependentUpon>frmAddCurriculum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\Add Course Components\frmAddCurriculumCourse.resx">
+      <DependentUpon>frmAddCurriculumCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\Add Course Components\frmAddDepartment.resx">
+      <DependentUpon>frmAddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\Add Course Components\frmAddModuleActivities.resx">
+      <DependentUpon>frmAddModuleActivities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\Add Course Components\frmAddModules.resx">
+      <DependentUpon>frmAddModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\Add Course Components\frmAddTrainingDepartmentCourses.resx">
+      <DependentUpon>frmAddTrainingDepartmentCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\Add Course Components\frmAddTrainingDepartmentCourseSeta.resx">
+      <DependentUpon>frmAddTrainingDepartmentCourseSeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\AddRemoveCurriculumCoursePreRequisites\frmAddPreRequisteCourses.resx">
+      <DependentUpon>frmAddPreRequisteCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\frmCourseConfiguration.resx">
+      <DependentUpon>frmCourseConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\Update Course Components\frmUpdateCurriculumCourse.resx">
+      <DependentUpon>frmUpdateCurriculumCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Courses\View Course Summary\frmCurriculumCourseSummary.resx">
+      <DependentUpon>frmCurriculumCourseSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Email\frmEmailMessage.resx">
+      <DependentUpon>frmEmailMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Email\Select Contacts\frmSelectEmailContacts.resx">
+      <DependentUpon>frmSelectEmailContacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Employees\AddUpdateEmployee\frmAddUpdateEmployee.resx">
+      <DependentUpon>frmAddUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Employees\CreateUpdateEmployeePassword\frmEmployeeUserNamePassword.resx">
+      <DependentUpon>frmEmployeeUserNamePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Employees\frmEmployeeDetails.resx">
+      <DependentUpon>frmEmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Employees\LinkEmployeeDepartment\frmEmployeeAssociatedDepartments.resx">
+      <DependentUpon>frmEmployeeAssociatedDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\EnquiryProcessing\Aprenticeship\Step1-DocumentsToSend\frmEnquiryDocumentsToSend_Apprenticeship.resx">
+      <DependentUpon>frmEnquiryDocumentsToSend_Apprenticeship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\EnquiryProcessing\Aprenticeship\Step2 - DocumentationRecieved\frmDocumentationRecieved.resx">
+      <DependentUpon>frmDocumentationRecieved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\frmClientEnquiry.resx">
+      <DependentUpon>frmClientEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\frmClientEnquiryV2.resx">
+      <DependentUpon>frmClientEnquiryV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\InitialConsultation\frmEnquiryInitialConsultation.resx">
+      <DependentUpon>frmEnquiryInitialConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\InitialDocumentation\frmInitailDocumentation.resx">
+      <DependentUpon>frmInitailDocumentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\NewEnquiry\frmNewEnquiry.resx">
+      <DependentUpon>frmNewEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\SelectContacts\frmSelectCompanyContact.resx">
+      <DependentUpon>frmSelectCompanyContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\SelectContacts\frmSelectIndividualContact.resx">
+      <DependentUpon>frmSelectIndividualContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\SelectCourseCurriculum\frmSelectCourseCurriculumForClientEnquiry.resx">
+      <DependentUpon>frmSelectCourseCurriculumForClientEnquiry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\UpdateSelectedCurriculumEnrollQty\frmUpdateSelectedCurriculumEnrollQty.resx">
+      <DependentUpon>frmUpdateSelectedCurriculumEnrollQty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enquiry\ViewHistory\frmEnquiryViewHistory.resx">
+      <DependentUpon>frmEnquiryViewHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enrollments\AddNewEnrollments\frmEnrollmentSelectCourseCurriculum.resx">
+      <DependentUpon>frmEnrollmentSelectCourseCurriculum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enrollments\CurriculumEmrollmentForms\ApprenticeshipEnrollment\frmApprenticeshipEnrollmentForm.resx">
+      <DependentUpon>frmApprenticeshipEnrollmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Enrollments\frmStudentCourseEnrollmentV2.resx">
+      <DependentUpon>frmStudentCourseEnrollmentV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Facilitators\AddUpdateFacilitator\frmAddUpdateFacilitactor.resx">
+      <DependentUpon>frmAddUpdateFacilitactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Facilitators\FacilitatorCourses\frmFacilitatorAssociatedCourses.resx">
+      <DependentUpon>frmFacilitatorAssociatedCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Facilitators\frmFacilitatorsDetails.resx">
+      <DependentUpon>frmFacilitatorsDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Facilitators\SearchForFacilitator\frmStudentSearchForStudent.resx">
+      <DependentUpon>frmStudentSearchForStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Login\frmSystemLogin.resx">
+      <DependentUpon>frmSystemLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\MessageTemplates\AddMessageTemplates\frmAddMessageTemplate.resx">
+      <DependentUpon>frmAddMessageTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\MessageTemplates\frmMessageTemplates.resx">
+      <DependentUpon>frmMessageTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Scheduling\ApprenticeshipSechduling\frmScheduleApprenticeship.resx">
+      <DependentUpon>frmScheduleApprenticeship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Students\frmStudentAddNewStudent.resx">
+      <DependentUpon>frmStudentAddNewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\Students\StudentSearch\frmStudentSearchForStudent.resx">
+      <DependentUpon>frmStudentSearchForStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\System\DatabaseSettings\frmDynamicallySetConnectionString.resx">
+      <DependentUpon>frmDynamicallySetConnectionString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationForms\System\EmailSettings\frmEmailConfiguration.resx">
+      <DependentUpon>frmEmailConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCDMainForm.resx">
+      <DependentUpon>MCDMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Address.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Company.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Course.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CurriculumCourse.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.CurriculumPrequisiteCourse.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Enquiry.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.LookupTitle.datasource" />
+    <None Include="Properties\DataSources\Impendulo.Data.Models.Student.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Impendulo.Common\Impendulo.Common.csproj">
+      <Project>{661069ef-8032-4af7-925e-56f8494a0d59}</Project>
+      <Name>Impendulo.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Impendulo.Data\Impendulo.Data.csproj">
+      <Project>{db508b3a-01f7-4b80-8ca3-c4c0151b63ee}</Project>
+      <Name>Impendulo.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplicationForms\Enrollments\CurriculumEmrollmentForms\AssesmentEnrollmenForms\" />
+    <Folder Include="ApplicationForms\Enrollments\CurriculumEmrollmentForms\LOPTEnrollmentForms\" />
+    <Folder Include="ApplicationForms\Enrollments\CurriculumEmrollmentForms\SoftSkillsEnrollmentForms\" />
+    <Folder Include="ApplicationForms\FileUploading\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
